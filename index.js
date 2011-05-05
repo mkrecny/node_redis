@@ -589,7 +589,9 @@ function Multi(client, args) {
     "getset", "mset", "msetnx", "randomkey", "select", "move", "rename", "renamenx", "expire", "expireat", "keys", "dbsize", "ping", "echo",
     "save", "bgsave", "bgwriteaof", "shutdown", "lastsave", "type", "sync", "flushdb", "flushall", "sort", "info", "discard",
     "monitor", "ttl", "persist", "slaveof", "debug", "config", "subscribe", "unsubscribe", "psubscribe", "punsubscribe", "publish", "watch", "unwatch",
-    "quit"
+    "quit",
+    //eval
+    "eval"
 ].forEach(function (command) {
     RedisClient.prototype[command] = function () {
         var args = to_array(arguments);
